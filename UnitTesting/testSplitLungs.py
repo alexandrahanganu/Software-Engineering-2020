@@ -5,6 +5,26 @@ from splitLungs import separateLungs
 import splitLungs
 
 class MyTestCase(unittest.TestCase):
+    def test_equalNumberOfOutputFilesFrontBackLeftLung(self):
+        onlyleftlungfrontback = len(os.listdir( "C:\\Users\\denis\\Desktop\\Software-Engineering2020\\TrainCTRs\\001\\Masks\\Mask1\\OnlyLeftLung\\FrontBack"))
+        frontback = len(os.listdir( "C:\\Users\\denis\\Desktop\\Software-Engineering2020\\TrainCTRs\\001\\Masks\\Mask1\\FrontBack"))
+        self.assertEqual(onlyleftlungfrontback,frontback)
+    
+    def test_equalNumberOfOutputFilesTopBottomLeftLung(self):
+        onlyleftlungtopbottom = len(os.listdir( "C:\\Users\\denis\\Desktop\\Software-Engineering2020\\TrainCTRs\\001\\Masks\\Mask1\\OnlyLeftLung\\TopBottom"))
+        topbottom = len(os.listdir( "C:\\Users\\denis\\Desktop\\Software-Engineering2020\\TrainCTRs\\001\\Masks\\Mask1\\TopBottom"))
+        self.assertEqual(onlyleftlungtopbottom,topbottom)
+        
+    def test_equalNumberOfOutputFilesFrontBackrightLung(self):
+        onlyrightlungfrontback = len(os.listdir( "C:\\Users\\denis\\Desktop\\Software-Engineering2020\\TrainCTRs\\001\\Masks\\Mask1\\OnlyRightLung\\FrontBack"))
+        frontback = len(os.listdir( "C:\\Users\\denis\\Desktop\\Software-Engineering2020\\TrainCTRs\\001\\Masks\\Mask1\\FrontBack"))
+        self.assertEqual(onlyrightlungfrontback,frontback)
+    
+    def test_equalNumberOfOutputFilesTopBottomLeftLung(self):
+        onlyrightlungtopbottom = len(os.listdir( "C:\\Users\\denis\\Desktop\\Software-Engineering2020\\TrainCTRs\\001\\Masks\\Mask1\\OnlyRightLung\\TopBottom"))
+        topbottom = len(os.listdir( "C:\\Users\\denis\\Desktop\\Software-Engineering2020\\TrainCTRs\\001\\Masks\\Mask1\\TopBottom"))
+        self.assertEqual(onlyrightlungtopbottom,topbottom)
+        
     def test_isFinalDir(self):
         self.assertFalse(isFinalDir("C:\\Users\\denis\\Desktop\\Software-Engineering2020\\TestCTRs\\001"))
         self.assertTrue(isFinalDir("C:\\Users\\denis\\Desktop\\Software-Engineering2020\\TrainCTRs\\001\\CT Scan\\FrontBack"))
