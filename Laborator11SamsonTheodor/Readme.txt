@@ -13,6 +13,9 @@ Am folosit toti parametrii disponibili atat pe layere cat si pe model pentru a v
 Diferentele au fost nesemnificative.
 In urma debugging-urilor efectuate am dovedit ca label-urile functioneaza, path-urile sunt corecte, pozele sunt preluate 
 una cate una, modelul are accuracy bun.
+Aveti pe branch-ul CNN : -folderul 09.05.20, acolo este codul, rezultatele din consola si rezultatele pentru cativa pacienti de la 
+implementarea cu keras.
+                         -folderul 7.8.20, ca anterior, dar pentru implementarea pe tensorflow.
 
 b) Ce probleme ati avut?
 
