@@ -5,7 +5,8 @@ Am reparat impreuna cu restul colegilor bug-urile pentru terminarea algoritmului
 Aproape terminasem partea noastra de la CNN, dar am dat de o mare problema, o gasiti la subpunctul b).
 Am trecut de la a folosi tensorflow la a folosi keras. Am scris codul integral pentru implementarea cu keras.
 Am mutat pozele preponderent negre intr-un alt folder (o mica restructurare).
-Am rulat ambii algoritmi atat pe pozele doar negre cat si pe cele cu gri, pe path-uri diferite si cu parametri schimbati, pentru a vedea pe care dintre ele sunt rezultate mai bune.
+Am rulat ambii algoritmi atat pe pozele doar negre cat si pe cele cu gri, pe path-uri diferite si cu parametri schimbati, 
+pentru a vedea pe care dintre ele sunt rezultate mai bune.
 Am incercat diferite rulari cu diferiti parametri pentru poze pentru identificarea problemei sau pentru a obtine o imbunatatire. 
 Din pacate n-am avut succes.
 Am folosit toti parametrii disponibili atat pe layere cat si pe model pentru a vedea daca exista vreo modificare. 
