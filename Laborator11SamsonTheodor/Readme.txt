@@ -26,7 +26,7 @@ destul de mica fata de plamanii celor bolnavi). Aceasta este singura problema pl
 
 c) Ce planuri aveti in continuare?
 
-Cred ca vom incerca, ca echipa, sa luam drept model INCA un algoritm nou (pana acum am avut ca model 4 sau 5 algoritmi diferiti pentru 
+Cred ca vom incerca, ca echipa, sa luam drept model INCA un algoritm nou (pana acum am avut ca model 3 sau 4 algoritmi diferiti pentru 
 a reusi sa avem rezultatele pe placul nostru). Acest nou algoritm foloseste deja masti, daca nici asta nu merge, nu stiu 
 ce am mai putea face. O alta posibilitate pe care o am in vedere este restructurarea folderelor si a pozelor de care dispunem, 
 pentru a vedea daca rezolvam problema descrisa la b).
