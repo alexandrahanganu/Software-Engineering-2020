@@ -1,0 +1,31 @@
+a) Ce ati reusit sa faceti in aceasta iteratie?
+1.Am creat un program care ia pe rand folderele pentru plamanul stang si drept, parcurs pe ONLYTLEFTLUNG si ONLYRIGHTLUNG si am cautat daca
+au imagine in toate folderele FrontBack,TopBottom si LeftRight pentru a vedea daca nu cumva luam gresit anumite imagini in programul nostru 
+de CNN so luam la unele pentru plamanul stang dreptul sau invers.
+Parcurgere:
+# LEFT LUNG
+#           ->FrontBack (CT Scan-Mask1, Mask1-Mask2, OnlyLeftLung-Mask2, OnlyLeftLung-Mask1)
+#           ->TopBottom (CT Scan-Mask1, Mask1-Mask2, OnlyLeftLung-Mask2, OnlyLeftLung-Mask1)
+#           ->LeftRight (CT Scan-Mask1, Mask1-Mask2, OnlyLeftLung-Mask2, OnlyLeftLung-Mask1)
+# RIGHT LUNG
+#           ->FrontBack (CT Scan-Mask1, Mask1-Mask2, OnlyRightLung-Mask2, OnlyRightLung-Mask1)
+#           ->TopBottom (CT Scan-Mask1, Mask1-Mask2, OnlyRightLung-Mask2, OnlyRightLung-Mask1)
+#           ->LeftRight (CT Scan-Mask1, Mask1-Mask2, OnlyRightLung-Mask2, OnlyRightLung-Mask1)
+Unit testing:
+SCRIPT: https://github.com/alexandrahanganu/Software-Engineering-2020/blob/CNN/Unit%20Testing/Scripts/Unit%20Testing%20-%20LEFT~RIGHT(CT%20Scan%2C%20Mask1%2C%20Mask2%2C%20OnlyLeftLung%2C%20OnlyRightLung).py.py
+RESULTS: https://github.com/alexandrahanganu/Software-Engineering-2020/blob/CNN/Unit%20Testing/Results/LEFT~RIGHT(CT%20Scan%2C%20Mask1%2C%20Mask2%2C%20OnlyLeftLung%2C%20OnlyRightLung).txt 
+24 de teste facut si doar 4 au trecut. Dar programul nostru e facut incat sa evite pentru pozele care nu au complement in CT Scan. Dar am
+gasit ca sunt o multitudine de neconcordante in numarul de imagini din fiecare poza.
+
+b) Ce probleme ati avut?
+
+1. Nu am gasit modalitati de a scadea media de imbolnavire pe care o da programul nostru, referindu-ma la pacientii sanatosi care sunt 
+declarati de programele noastre CNN ca sunt bolnavi 0.8 media. Chiar si dupa ce am scos fundalurile pozelor cu plamanii crezand ca afecteaza
+majoritar predictia de a fi bolnav sau nu. Insa sunt cateva diferente la predictii insa nu sunt vizibile.
+Am cautat programe similare care detecteaza folosind CNN diferente mici in imaginile de test fata de imaginile de train, insa am gasit 
+doar programe care detecteaza diferente mari adica nu doar cativa pixeli de culori diferite. Am  cautat chiar si pentru programe similare
+pentru plamani https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6317251/ si nu am gasit nimic ce putem aplica astfel incat sa ne creasca/scada
+media pe care o dam unui pacient de forma XYZ(001) sa fie bolnav.
+  
+c) Ce planuri aveti in continuare?
+ 
