@@ -15,7 +15,11 @@ Unit testing:
 SCRIPT: https://github.com/alexandrahanganu/Software-Engineering-2020/blob/CNN/Unit%20Testing/Scripts/Unit%20Testing%20-%20LEFT~RIGHT(CT%20Scan%2C%20Mask1%2C%20Mask2%2C%20OnlyLeftLung%2C%20OnlyRightLung).py.py
 RESULTS: https://github.com/alexandrahanganu/Software-Engineering-2020/blob/CNN/Unit%20Testing/Results/LEFT~RIGHT(CT%20Scan%2C%20Mask1%2C%20Mask2%2C%20OnlyLeftLung%2C%20OnlyRightLung).txt 
 24 de teste facut si doar 4 au trecut. Dar programul nostru e facut incat sa evite pentru pozele care nu au complement in CT Scan. Dar am
-gasit ca sunt o multitudine de neconcordante in numarul de imagini din fiecare poza.
+gasit ca sunt o multitudine de neconcordante in numarul de imagini din fiecare dintre foldere. De la 001 pacient pana la ultimul daca aduni
+numarul de poze pentru CT Scan, Mask1, Mask2, OnlyLefLung, OnlyRightLung si apoi intrat in FrontBack, TopBottom, LeftRight, vor da un count
+de exemplu: FAIL: test_LEFTTopBottomMask1OnlyLeftLungMask2 (__main__.TestCase) - calculeaza numarul de poze total din Mask1 plamanul stang
+la toti pacientii doar folderele TopBottom apoi calculeaza numarul de poze din Mask2 Top Bottom si ne da numere diferite de poze
+unele imagini nu exista cu acelasi nume in folderul Mask1/OnlyLeftLung/TopBottom iar in Mask2 exista.  AssertionError: 5731 != 5778 : [LEFT/TopBottom]Numar diferit Mask1OnlyLeftLung - Mask2
 
 b) Ce probleme ati avut?
 
