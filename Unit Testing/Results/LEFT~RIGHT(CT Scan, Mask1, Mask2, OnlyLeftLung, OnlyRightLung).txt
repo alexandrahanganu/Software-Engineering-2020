@@ -1,3 +1,10 @@
+[WAHT LUNG LEFT\RIGHT/WHAT PART OF LUNG FRONTBACK\TOPBOTTOM\LEFTRIGHT]Numar diferit WHAT PART OF LUNG1 FRONTBACK\TOPBOTTOM\LEFTRIGHT WHAT PART OF LUNG2 FRONTBACK\TOPBOTTOM\LEFTRIGHT
+EX: [LEFT/FrontBack]Numar diferit CT Scan - Mask1
+
+
+
+
+
 C:\Users\ady_e\.conda\envs\tensorflow\python.exe "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py"
 F.FFFFFFF.FFF.FFFFFFF.FF
 ======================================================================
