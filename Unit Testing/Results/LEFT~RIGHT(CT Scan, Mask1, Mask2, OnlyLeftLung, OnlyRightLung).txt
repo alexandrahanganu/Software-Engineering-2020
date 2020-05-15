@@ -1,0 +1,168 @@
+C:\Users\ady_e\.conda\envs\tensorflow\python.exe "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py"
+F.FFFFFFF.FFF.FFFFFFF.FF
+======================================================================
+FAIL: test_LEFTFrontBackCTScanMask1 (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py", line 44, in test_LEFTFrontBackCTScanMask1
+    self.assertEqual(countNumePozaCTScan, countNumePozaMask, "[LEFT/FrontBack]Numar diferit CT Scan - Mask1")
+AssertionError: 18961 != 20702 : [LEFT/FrontBack]Numar diferit CT Scan - Mask1
+
+======================================================================
+FAIL: test_LEFTFrontBackMask1OnlyLeftLungMask1 (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py", line 117, in test_LEFTFrontBackMask1OnlyLeftLungMask1
+    self.assertEqual(countNumePozaMaskO, countNumePozaMask1, "[LEFT/FrontBack]Numar diferit Mask1OnlyLeftLung - Mask1")
+AssertionError: 20583 != 20702 : [LEFT/FrontBack]Numar diferit Mask1OnlyLeftLung - Mask1
+
+======================================================================
+FAIL: test_LEFTFrontBackMask1OnlyLeftLungMask2 (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py", line 93, in test_LEFTFrontBackMask1OnlyLeftLungMask2
+    self.assertEqual(countNumePozaMaskO, countNumePozaMask2, "[LEFT/FrontBack]Numar diferit Mask1OnlyLeftLung - Mask2")
+AssertionError: 20583 != 20702 : [LEFT/FrontBack]Numar diferit Mask1OnlyLeftLung - Mask2
+
+======================================================================
+FAIL: test_LEFTLeftRightCTScanMask1 (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py", line 243, in test_LEFTLeftRightCTScanMask1
+    self.assertEqual(countNumePozaCTScan, countNumePozaMask, "[LEFT/LeftRight]Numar diferit CT Scan - Mask1")
+AssertionError: 18395 != 21374 : [LEFT/LeftRight]Numar diferit CT Scan - Mask1
+
+======================================================================
+FAIL: test_LEFTLeftRightMask1Mask2 (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py", line 267, in test_LEFTLeftRightMask1Mask2
+    self.assertEqual(countNumePozaMask, countNumePozaMask2, "[LEFT/LeftRight]Numar diferit Mask1 - Mask2")
+AssertionError: 21374 != 21412 : [LEFT/LeftRight]Numar diferit Mask1 - Mask2
+
+======================================================================
+FAIL: test_LEFTLeftRightMask1OnlyLeftLungMask1 (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py", line 316, in test_LEFTLeftRightMask1OnlyLeftLungMask1
+    self.assertEqual(countNumePozaMaskO, countNumePozaMask1, "[LEFT/LeftRight]Numar diferit Mask1OnlyLeftLung - Mask1")
+AssertionError: 10254 != 21374 : [LEFT/LeftRight]Numar diferit Mask1OnlyLeftLung - Mask1
+
+======================================================================
+FAIL: test_LEFTLeftRightMask1OnlyLeftLungMask2 (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py", line 292, in test_LEFTLeftRightMask1OnlyLeftLungMask2
+    self.assertEqual(countNumePozaMaskO, countNumePozaMask2, "[LEFT/LeftRight]Numar diferit Mask1OnlyLeftLung - Mask2")
+AssertionError: 10254 != 21412 : [LEFT/LeftRight]Numar diferit Mask1OnlyLeftLung - Mask2
+
+======================================================================
+FAIL: test_LEFTTopBottomCTScanMask1 (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py", line 144, in test_LEFTTopBottomCTScanMask1
+    self.assertEqual(countNumePozaCTScan, countNumePozaMask, "[LEFT/TopBottom]Numar diferit CT Scan - Mask1")
+AssertionError: 5377 != 5778 : [LEFT/TopBottom]Numar diferit CT Scan - Mask1
+
+======================================================================
+FAIL: test_LEFTTopBottomMask1OnlyLeftLungMask1 (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py", line 217, in test_LEFTTopBottomMask1OnlyLeftLungMask1
+    self.assertEqual(countNumePozaMaskO, countNumePozaMask1, "[LEFT/TopBottom]Numar diferit Mask1OnlyLeftLung - Mask1")
+AssertionError: 5731 != 5778 : [LEFT/TopBottom]Numar diferit Mask1OnlyLeftLung - Mask1
+
+======================================================================
+FAIL: test_LEFTTopBottomMask1OnlyLeftLungMask2 (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py", line 193, in test_LEFTTopBottomMask1OnlyLeftLungMask2
+    self.assertEqual(countNumePozaMaskO, countNumePozaMask2, "[LEFT/TopBottom]Numar diferit Mask1OnlyLeftLung - Mask2")
+AssertionError: 5731 != 5778 : [LEFT/TopBottom]Numar diferit Mask1OnlyLeftLung - Mask2
+
+======================================================================
+FAIL: test_RIGHTFrontBackCTScanMask1 (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py", line 344, in test_RIGHTFrontBackCTScanMask1
+    self.assertEqual(countNumePozaCTScan, countNumePozaMask, "[RIGHT/FrontBack]Numar diferit CT Scan - Mask1")
+AssertionError: 18961 != 20702 : [RIGHT/FrontBack]Numar diferit CT Scan - Mask1
+
+======================================================================
+FAIL: test_RIGHTFrontBackMask1OnlyRightLungMask1 (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py", line 420, in test_RIGHTFrontBackMask1OnlyRightLungMask1
+    self.assertEqual(countNumePozaMaskO, countNumePozaMask1,"[RIGHT/FrontBack]Numar diferit Mask1OnlyRightLung - Mask1")
+AssertionError: 20583 != 20702 : [RIGHT/FrontBack]Numar diferit Mask1OnlyRightLung - Mask1
+
+======================================================================
+FAIL: test_RIGHTFrontBackMask1OnlyRightLungMask2 (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py", line 395, in test_RIGHTFrontBackMask1OnlyRightLungMask2
+    self.assertEqual(countNumePozaMaskO, countNumePozaMask2,"[RIGHT/FrontBack]Numar diferit Mask1OnlyRightLung - Mask2")
+AssertionError: 20583 != 20702 : [RIGHT/FrontBack]Numar diferit Mask1OnlyRightLung - Mask2
+
+======================================================================
+FAIL: test_RIGHTLeftRightCTScanMask1 (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py", line 548, in test_RIGHTLeftRightCTScanMask1
+    self.assertEqual(countNumePozaCTScan, countNumePozaMask, "[RIGHT/LeftRight]Numar diferit CT Scan - Mask1")
+AssertionError: 18395 != 21374 : [RIGHT/LeftRight]Numar diferit CT Scan - Mask1
+
+======================================================================
+FAIL: test_RIGHTLeftRightMask1Mask2 (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py", line 573, in test_RIGHTLeftRightMask1Mask2
+    self.assertEqual(countNumePozaMask, countNumePozaMask2, "[RIGHT/LeftRight]Numar diferit Mask1 - Mask2")
+AssertionError: 21374 != 21412 : [RIGHT/LeftRight]Numar diferit Mask1 - Mask2
+
+======================================================================
+FAIL: test_RIGHTLeftRightMask1OnlyRightLungMask1 (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py", line 624, in test_RIGHTLeftRightMask1OnlyRightLungMask1
+    self.assertEqual(countNumePozaMaskO, countNumePozaMask1,"[RIGHT/LeftRight]Numar diferit Mask1OnlyRighttLung - Mask1")
+AssertionError: 10892 != 21374 : [RIGHT/LeftRight]Numar diferit Mask1OnlyRighttLung - Mask1
+
+======================================================================
+FAIL: test_RIGHTLeftRightMask1OnlyRightLungMask2 (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py", line 599, in test_RIGHTLeftRightMask1OnlyRightLungMask2
+    self.assertEqual(countNumePozaMaskO, countNumePozaMask2,"[RIGHT/LeftRight]Numar diferit Mask1OnlyRightLung - Mask2")
+AssertionError: 10892 != 21412 : [RIGHT/LeftRight]Numar diferit Mask1OnlyRightLung - Mask2
+
+======================================================================
+FAIL: test_RIGHTTopBottomCTScanMask1 (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py", line 446, in test_RIGHTTopBottomCTScanMask1
+    self.assertEqual(countNumePozaCTScan, countNumePozaMask, "[RIGHT/TopBottom]Numar diferit CT Scan - Mask1")
+AssertionError: 5377 != 5778 : [RIGHT/TopBottom]Numar diferit CT Scan - Mask1
+
+======================================================================
+FAIL: test_RIGHTTopBottomMask1OnlyRightLungMask1 (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py", line 522, in test_RIGHTTopBottomMask1OnlyRightLungMask1
+    self.assertEqual(countNumePozaMaskO, countNumePozaMask1,"[RIGHT/TopBottom]Numar diferit Mask1OnlyRightLung - Mask1")
+AssertionError: 5731 != 5778 : [RIGHT/TopBottom]Numar diferit Mask1OnlyRightLung - Mask1
+
+======================================================================
+FAIL: test_RIGHTTopBottomMask1OnlyRightLungMask2 (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:/Unit Testing/Unit Testing - LEFT~RIGHT(CT Scan, Mask1, Mask2, OnlyLeftLung, OnlyRightLung).py.py", line 497, in test_RIGHTTopBottomMask1OnlyRightLungMask2
+    self.assertEqual(countNumePozaMaskO, countNumePozaMask2,"[RIGHT/TopBottom]Numar diferit Mask1OnlyRightLung - Mask2")
+AssertionError: 5731 != 5778 : [RIGHT/TopBottom]Numar diferit Mask1OnlyRightLung - Mask2
+
+----------------------------------------------------------------------
+Ran 24 tests in 1.349s
+
+FAILED (failures=20)
+
+Process finished with exit code 1
