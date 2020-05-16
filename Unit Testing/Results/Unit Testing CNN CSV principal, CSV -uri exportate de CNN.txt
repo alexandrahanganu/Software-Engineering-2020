@@ -1,0 +1,152 @@
+Testing started at 7:53 PM ...
+C:\Users\ady_e\.conda\envs\tensorflow\python.exe "D:\Pycharm\PyCharm Community Edition 2019.3.4\plugins\python-ce\helpers\pycharm\_jb_unittest_runner.py" --path "D:/UnitTesting Results/Unit TestingResults/Unit Testing CNN CSV principal, CSV -uri exportate de CNN.py"
+Launching unittests with arguments python -m unittest D:/UnitTesting Results/Unit TestingResults/Unit Testing CNN CSV principal, CSV -uri exportate de CNN.py in D:\UnitTesting Results\Unit TestingResults
+
+
+[Caverns_Results_Left]Raspunsuri corecte:6, raspunsuri gresite:5
+11 != 6
+
+Expected :6
+Actual   :11
+<Click to see difference>
+
+Traceback (most recent call last):
+  File "D:\Pycharm\PyCharm Community Edition 2019.3.4\plugins\python-ce\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 822, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 6 != 11 : [Caverns_Results_Left]Raspunsuri corecte:6, raspunsuri gresite:5
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 605, in run
+    testMethod()
+  File "D:\UnitTesting Results\Unit TestingResults\Unit Testing CNN CSV principal, CSV -uri exportate de CNN.py", line 107, in test_Caverns_Results_Left
+    self.assertEqual(predictii_corecte, Diferenta,"[Caverns_Results_Left]Raspunsuri corecte:" + str(predictii_corecte) + ", raspunsuri gresite:" + str(predictii_gresite))
+
+
+[Caverns_Results_Right]Raspunsuri corecte:6, raspunsuri gresite:5
+11 != 6
+
+Expected :6
+Actual   :11
+<Click to see difference>
+
+Traceback (most recent call last):
+  File "D:\Pycharm\PyCharm Community Edition 2019.3.4\plugins\python-ce\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 822, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 6 != 11 : [Caverns_Results_Right]Raspunsuri corecte:6, raspunsuri gresite:5
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 605, in run
+    testMethod()
+  File "D:\UnitTesting Results\Unit TestingResults\Unit Testing CNN CSV principal, CSV -uri exportate de CNN.py", line 137, in test_Caverns_Results_Right
+    self.assertEqual(predictii_corecte, Diferenta,"[Caverns_Results_Right]Raspunsuri corecte:" + str(predictii_corecte) + ", raspunsuri gresite:" + str(predictii_gresite))
+
+
+[Pleurisy_Results_Right]Raspunsuri corecte:10, raspunsuri gresite:1
+11 != 10
+
+Expected :10
+Actual   :11
+<Click to see difference>
+
+Traceback (most recent call last):
+  File "D:\Pycharm\PyCharm Community Edition 2019.3.4\plugins\python-ce\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 822, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 10 != 11 : [Pleurisy_Results_Right]Raspunsuri corecte:10, raspunsuri gresite:1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 605, in run
+    testMethod()
+  File "D:\UnitTesting Results\Unit TestingResults\Unit Testing CNN CSV principal, CSV -uri exportate de CNN.py", line 197, in test_Pleurisy_Results_Right
+    self.assertEqual(predictii_corecte, Diferenta,"[Pleurisy_Results_Right]Raspunsuri corecte:" + str(predictii_corecte) + ", raspunsuri gresite:" + str(predictii_gresite))
+
+
+[TBC_Results_Left]Raspunsuri corecte:9, raspunsuri gresite:2
+11 != 9
+
+Expected :9
+Actual   :11
+<Click to see difference>
+
+Traceback (most recent call last):
+  File "D:\Pycharm\PyCharm Community Edition 2019.3.4\plugins\python-ce\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 822, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 9 != 11 : [TBC_Results_Left]Raspunsuri corecte:9, raspunsuri gresite:2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 605, in run
+    testMethod()
+  File "D:\UnitTesting Results\Unit TestingResults\Unit Testing CNN CSV principal, CSV -uri exportate de CNN.py", line 47, in test_TBC_Results_Left
+    self.assertEqual(predictii_corecte, Diferenta,"[TBC_Results_Left]Raspunsuri corecte:" + str(predictii_corecte) + ", raspunsuri gresite:" + str(predictii_gresite))
+
+
+[TBC_Results_Right]Raspunsuri corecte:8, raspunsuri gresite:3
+11 != 8
+
+Expected :8
+Actual   :11
+<Click to see difference>
+
+
+Traceback (most recent call last):
+  File "D:\Pycharm\PyCharm Community Edition 2019.3.4\plugins\python-ce\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 822, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 8 != 11 : [TBC_Results_Right]Raspunsuri corecte:8, raspunsuri gresite:3
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 605, in run
+    testMethod()
+  File "D:\UnitTesting Results\Unit TestingResults\Unit Testing CNN CSV principal, CSV -uri exportate de CNN.py", line 77, in test_TBC_Results_Right
+    self.assertEqual(predictii_corecte, Diferenta,"[TBC_Results_Right]Raspunsuri corecte:" + str(predictii_corecte) + ", raspunsuri gresite:" + str(predictii_gresite))
+
+
+Ran 6 tests in 0.025s
+
+FAILED (failures=5)
+
+Process finished with exit code 1
+
+Assertion failed
+
+Assertion failed
+
+Assertion failed
