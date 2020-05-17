@@ -41,6 +41,8 @@ medie_bolnav = 0.5
 Putem modifica media_bolnav pentru fiecare test in parte pentru a putea vedea daca cei sanatosi sunt intr_un anumit interval de exemplu 0-0.5
 si cei bolavi intr-un interval 0.5-1 Dar se pare ca sunt pacienti bolavi care au predictiile sub predictiile celor sanatosi
 
+3.Invatat cum functioneaza keras optimizer https://www.google.com/search?client=opera&q=keas+optimizer&sourceid=opera&ie=UTF-8&oe=UTF-8 si
+asteptat o forma de program final pentru a optimiza
 b) Ce probleme ati avut?
 
 1. Nu am gasit modalitati de a scadea media de imbolnavire pe care o da programul nostru, referindu-ma la pacientii sanatosi care sunt 
@@ -55,3 +57,6 @@ pentru pacienti
   
 c) Ce planuri aveti in continuare?
  
+1. Cautat un inteval si vazut daca predictiile pentru persoanele sanatoase sunt mai mici decat predictiile pentru persoane bolnave si
+facut un program de forma unit testingului de la sub a)2 care da in functie de 80% macar predictie corecta pentru pacient
+2. Ajutat colegii cu ce mai e nevoie pentru programul principal CNN pentru optimizare cu keras learning
