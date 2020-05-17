@@ -1,0 +1,62 @@
+a) Ce ati reusit sa faceti in aceasta iteratie?
+1.[unit testing]Am creat un program care ia pe rand folderele pentru plamanul stang si drept, parcurs pe ONLYTLEFTLUNG si ONLYRIGHTLUNG si am cautat daca
+au imagine in toate folderele FrontBack,TopBottom si LeftRight pentru a vedea daca nu cumva luam gresit anumite imagini in programul nostru 
+de CNN so luam la unele pentru plamanul stang dreptul sau invers.
+Parcurgere:
+# LEFT LUNG
+#           ->FrontBack (CT Scan-Mask1, Mask1-Mask2, OnlyLeftLung-Mask2, OnlyLeftLung-Mask1)
+#           ->TopBottom (CT Scan-Mask1, Mask1-Mask2, OnlyLeftLung-Mask2, OnlyLeftLung-Mask1)
+#           ->LeftRight (CT Scan-Mask1, Mask1-Mask2, OnlyLeftLung-Mask2, OnlyLeftLung-Mask1)
+# RIGHT LUNG
+#           ->FrontBack (CT Scan-Mask1, Mask1-Mask2, OnlyRightLung-Mask2, OnlyRightLung-Mask1)
+#           ->TopBottom (CT Scan-Mask1, Mask1-Mask2, OnlyRightLung-Mask2, OnlyRightLung-Mask1)
+#           ->LeftRight (CT Scan-Mask1, Mask1-Mask2, OnlyRightLung-Mask2, OnlyRightLung-Mask1)
+Unit testing:
+SCRIPT: https://github.com/alexandrahanganu/Software-Engineering-2020/blob/CNN/Unit%20Testing/Scripts/Unit%20Testing%20-%20LEFT~RIGHT(CT%20Scan%2C%20Mask1%2C%20Mask2%2C%20OnlyLeftLung%2C%20OnlyRightLung).py.py
+RESULTS: https://github.com/alexandrahanganu/Software-Engineering-2020/blob/CNN/Unit%20Testing/Results/LEFT~RIGHT(CT%20Scan%2C%20Mask1%2C%20Mask2%2C%20OnlyLeftLung%2C%20OnlyRightLung).txt 
+24 de teste facut si doar 4 au trecut. Dar programul nostru e facut incat sa evite pentru pozele care nu au complement in CT Scan. Dar am
+gasit ca sunt o multitudine de neconcordante in numarul de imagini din fiecare dintre foldere. De la 001 pacient pana la ultimul daca aduni
+numarul de poze pentru CT Scan, Mask1, Mask2, OnlyLefLung, OnlyRightLung si apoi intrat in FrontBack, TopBottom, LeftRight, vor da un count
+de exemplu: FAIL: test_LEFTTopBottomMask1OnlyLeftLungMask2 (__main__.TestCase) - calculeaza numarul de poze total din Mask1 plamanul stang
+la toti pacientii doar folderele TopBottom apoi calculeaza numarul de poze din Mask2 Top Bottom si ne da numere diferite de poze
+unele imagini nu exista cu acelasi nume in folderul Mask1/OnlyLeftLung/TopBottom iar in Mask2 exista.  AssertionError: 5731 != 5778 : [LEFT/TopBottom]Numar diferit Mask1OnlyLeftLung - Mask2
+
+2.[unit testing]Am creat un program care ia CSV_Report.csv si verifica daca programul principal da predictii bune pentru pacienti
+script: https://github.com/alexandrahanganu/Software-Engineering-2020/blob/CNN/Unit%20Testing/Scripts/Unit%20Testing%20CNN%20CSV%20principal%2C%20CSV%20-uri%20exportate%20de%20CNN.py
+rezultat: https://github.com/alexandrahanganu/Software-Engineering-2020/blob/CNN/Unit%20Testing/Results/Unit%20Testing%20CNN%20CSV%20principal%2C%20CSV%20-uri%20exportate%20de%20CNN.txt
+ CSV IN D:\\GIT\\CSV\\...
+# 178-188 results UNIT TESTING
+# Spunem ca medie_bolnav sub 0.5 sanatos peste 0.5 bolnav
+# Start este pacientul cu care se incepe, stop pacientul cu care se termina, verificati sa aveti valori in ambele CSV-uri, cel principal unde vedeti clar daca un pacient
+# este bolnav sau nu si in al doilea CSV (TBC_LEFT, TBC_RIGHT, CAVERNA_LEFT, CAVERNA_RIGHT, PLEUREZIE_LEFT, PLEUREZIE_RIGHT)
+# CSV PRINCIPAL DE FORMA(RASPUNSURILE CORECTE):
+# Pacientul(NUMAR):{row[0]} - LeftLungAffected {row[1]}, RightLungAffected {row[2]},CavernsLeft {row[3]},CavernsRight {row[4]},PleurisyLeft {row[5]},PleurisyRight {row[6]}
+# CSV SECUNDAR DE FORMAL(TBC_LEFT, TBC_RIGHT, CAVERNA_LEFT, CAVERNA_RIGHT, PLEUREZIE_LEFT, PLEUREZIE_RIGHT):
+# Pacientul(NUMAR):{row[0]} PREDICTIE: {row[1]}
+Start = 178
+Stop = 188
+Diferenta = Stop - Start + 1
+medie_bolnav = 0.5
+
+Putem modifica media_bolnav pentru fiecare test in parte pentru a putea vedea daca cei sanatosi sunt intr_un anumit interval de exemplu 0-0.5
+si cei bolavi intr-un interval 0.5-1 Dar se pare ca sunt pacienti bolavi care au predictiile sub predictiile celor sanatosi
+
+3.Invatat cum functioneaza keras optimizer https://www.google.com/search?client=opera&q=keas+optimizer&sourceid=opera&ie=UTF-8&oe=UTF-8 si
+asteptat o forma de program final pentru a optimiza
+b) Ce probleme ati avut?
+
+1. Nu am gasit modalitati de a scadea media de imbolnavire pe care o da programul nostru, referindu-ma la pacientii sanatosi care sunt 
+declarati de programele noastre CNN ca sunt bolnavi 0.8 media. Chiar si dupa ce am scos fundalurile pozelor cu plamanii crezand ca afecteaza
+majoritar predictia de a fi bolnav sau nu. Insa sunt cateva diferente la predictii insa nu sunt vizibile.
+Am cautat programe similare care detecteaza folosind CNN diferente mici in imaginile de test fata de imaginile de train, insa am gasit 
+doar programe care detecteaza diferente mari adica nu doar cativa pixeli de culori diferite. Am  cautat chiar si pentru programe similare
+pentru plamani https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6317251/ si nu am gasit nimic ce putem aplica astfel incat sa ne creasca/scada
+media pe care o dam unui pacient de forma XYZ(001) sa fie bolnav.
+2. Nu pot gasi intervale de predictii la scriptul facut de mine pentru programul principal CNN astfel incat sa avem 0 raspunsuri gresite
+pentru pacienti
+  
+c) Ce planuri aveti in continuare?
+ 
+1. Cautat un inteval si vazut daca predictiile pentru persoanele sanatoase sunt mai mici decat predictiile pentru persoane bolnave si
+facut un program de forma unit testingului de la sub a)2 care da in functie de 80% macar predictie corecta pentru pacient
+2. Ajutat colegii cu ce mai e nevoie pentru programul principal CNN pentru optimizare cu keras learning
