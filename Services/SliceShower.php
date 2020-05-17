@@ -4,13 +4,13 @@
 
             $ct_path = str_replace("\\", "\\\\", $ct_path);
             
-            exec("C:/Python/python.exe C:\\xampp\\htdocs\\Software-Engineering2020\\Scripts\\PreProcessingScripts\\nii_to_png_All_Slices.py "
+            exec("C:\Python38\python.exe C:\\xampp\\htdocs\\Scripts\\PreProcessingScripts\\nii_to_png_All_Slices.py "
               . $ct_path );
         }
 
  ?>
  
-<!DOCTYPE html>
+
 <html>
 <head>
      <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -64,7 +64,6 @@
             imgFB.innerHTML = "<img class=\"prod_img\" src=\"../ProcessedPatients/"+ filename + "/CT Scan/All/FrontBack/" + filename +"_z0"+sliderFB.value+".png\" alt=\"\">";
         if(sliderFB.value > 99)
             imgFB.innerHTML = "<img class=\"prod_img\" src=\"../ProcessedPatients/"+ filename + "/CT Scan/All/FrontBack/" + filename +"_z"+sliderFB.value+".png\" alt=\"\">";
-        alert("../ProcessedPatients/"+ filename + "/CT Scan/All/FrontBack/" + filename +"_z"+sliderFB.value+".png")
     }
 
     var sliderLR = document.getElementById("myRangeLR");
