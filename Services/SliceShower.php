@@ -3,7 +3,10 @@
          
           if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $ct_path = $_POST['path_to_ct'];
+            $ct_path = str_replace("\\", "\\\\", $ct_path);
+            
             $mask_path = $_POST['path_to_mask'];
+            $mask_path = str_replace("\\", "\\\\", $mask_path);
             exec("python nii_to_png_script3.0.py $ct_path $mask_path");
         }  
  ?>
