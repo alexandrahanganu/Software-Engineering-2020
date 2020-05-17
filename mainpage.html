@@ -2,16 +2,17 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="Scripts/MainPageScript.js"></script>
+	<link rel="stylesheet" type="text/css" href="Styles/style.css">
 	
-	<title>App</title>
-	<link rel="stylesheet" href="style.css">
+	<title>Tuberculosis Check</title>
 </head>
 <body>
 	<header>
 		<div class="container">
 			<div id="branding">
-				<h1>Ai/N-ai Cancer</h1>
+				<h1>Tuberculosis analysis</h1>
 			</div>  
 		</div>
 	</header>
@@ -20,8 +21,11 @@
 		<div class="container">
 			<form action="https://youtu.be/j9V78UbdzWI?t=93" method="POST">
 			<div>
-				<label>Path: </label>
-		 		<input type="text" name="path" placeholder="Enter the path...">
+				<label>Path to CT file: </label>
+				 <input type="text" name="path_to_ct" placeholder="Enter the path...">
+				 <br>
+				 <label> Path to the Mask-R file</label>
+					<input type="text" name="path_to_mask" placeholder="Enter the path...">
 			</div>
 			<br>
 			<div>
@@ -29,12 +33,16 @@
 		 		<select name="result">		
 		 		<option value="cnn"> CNN</option>
 		 		<option value="svm"> SVM</option>
-		 		<option value="both"> both</option>
+		 		<option value="Both"> Both</option>
 		 		</select>
 		 	</div>
 		 	<br>
-		 	<button type="submit" class="button">Show results</button>
-		</form>
+			 <button type="submit" class="submit_button" name="results_btn" formaction="Services/runScripts.php">Check if I am healthy</button>
+			 <button type="submit" class="submit_button" name="slices_btn"
+					formaction="Services/SliceShower.php">
+					Show slices of the scan 
+			 </button>
+			</form>
 			
 		</div>
 		
