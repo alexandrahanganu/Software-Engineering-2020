@@ -70,19 +70,12 @@ def slice_tb(image_array, inputfile, outputtb, from_slice, to_slice):
 
 def main(argv):
 
-    inputfileM1 = argv[1]  # Scans location
+    inputfileM1 = argv[1]
     inputfileCT = argv[0]
-    # Scan number
-    '''if i < 10:
-        j = "00" + str(i)
-    elif i < 100:
-        j = "0" + str(i)
-    elif i < 1000:
-        j = str(i)
-    '''
-    outputfolder = "C:\\Users\\denis\\Desktop\\TestScans\\" + "024"  # Output location
 
-    file_name = "CTR_TRN_" + "024" + ".nii.gz"
+    outputfolder = "C:\\Users\\corina\\Desktop\\TestScans\\" + os.path.basename(argv[0])  # Output location
+
+    file_name = os.path.basename(argv[0])
     inputfileM1 = inputfileM1 + file_name
     inputfileCT = inputfileCT + file_name
 
