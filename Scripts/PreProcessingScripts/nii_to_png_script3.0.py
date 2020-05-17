@@ -7,8 +7,7 @@ import imageio
 import gc
 from skimage.transform import resize
 import warnings
-
-warnings.suppress = True
+from time import time
 
 def allZeros(list):
     for elem in list:
@@ -32,9 +31,8 @@ def slice_lr(image_array, inputfile, outputlr, from_slice, to_slice):
 
         data = data.astype(numpy.float32)
         data = resize(data, (512, 512))
-        imageio.imwrite(image_name, data)
-        src = image_name
-        shutil.move(src, outputlr)
+        imageio.imwrite(outputlr + "\\" + image_name, data)
+
     gc.collect()
 
 
@@ -46,10 +44,8 @@ def slice_fb(image_array, inputfile, outputfb, from_slice, to_slice):
         image_name = inputfile[:-7] + "_z" + "{:0>3}".format(str(current_slice + 1)) + ".png"
         data = data.astype(numpy.float32)
         data = resize(data, (512, 512))
-        imageio.imwrite(image_name, data)
-        # move images to folder
-        src = image_name
-        shutil.move(src, outputfb)
+        imageio.imwrite(outputfb + "\\" + image_name, data)
+
     gc.collect()
 
 
@@ -61,23 +57,21 @@ def slice_tb(image_array, inputfile, outputtb, from_slice, to_slice):
         data = image_array[:, :, current_slice]
         image_name = inputfile[:-7] + "_z" + "{:0>3}".format(str(current_slice + 1)) + ".png"
         data = data.astype(numpy.float32)
-        imageio.imwrite(image_name, data)
-        # move images to folder
-        src = image_name
-        shutil.move(src, outputtb)
+        imageio.imwrite(outputtb + "\\" + image_name, data)
     gc.collect()
 
 
 def main(argv):
+    sys.setrecursionlimit(1500)
+    start = time()
 
     inputfileM1 = argv[1]
     inputfileCT = argv[0]
 
-    outputfolder = "C:\\Users\\corina\\Desktop\\TestScans\\" + os.path.basename(argv[0])  # Output location
+    outputfolder = "C:\\Users\\denis\\Desktop\\TestScans\\" + os.path.basename(argv[0]).split(".",1)[0]  # Output location
 
-    file_name = os.path.basename(argv[0])
-    inputfileM1 = inputfileM1 + file_name
-    inputfileCT = inputfileCT + file_name
+    filenameM1 = os.path.basename(argv[1]).split(".",1)[0]
+    filenameCT = os.path.basename(argv[0]).split(".",1)[0]
 
     outputlrM1 = outputfolder + "\\Masks\\Mask1\\LeftRight"
     outputfbM1 = outputfolder + "\\Masks\\Mask1\\FrontBack"
@@ -118,8 +112,8 @@ def main(argv):
         for j in range(0, total_slicesLR):
             if j % 4 == 0 and (j < 225 or j>275) and not(allZeros(image_arrayM1[j, :, :])):
                 if aditionalDeleteCounter > 4:
-                    slice_lr(image_arrayM1, inputfileM1, outputlrM1, j, (j + 1))
-                    slice_lr(image_arrayCT, inputfileCT, outputlrCT, j, (j + 1))
+                    slice_lr(image_arrayM1, filenameM1, outputlrM1, j, (j + 1))
+                    slice_lr(image_arrayCT, filenameCT, outputlrCT, j, (j + 1))
                 else:
                     aditionalDeleteCounter += 1
 
@@ -132,19 +126,18 @@ def main(argv):
         for j in range(0, 241):
             if j % 4 == 0 and not(allZeros(image_arrayM1[:, j, :])):
                 if aditionalDeleteCounter > 10:
-                    slice_fb(image_arrayM1, inputfileM1, outputfbM1, j, (j + 1))
-                    slice_fb(image_arrayCT, inputfileCT, outputfbCT, j, (j + 1))
+                    slice_fb(image_arrayM1, filenameM1, outputfbM1, j, (j + 1))
+                    slice_fb(image_arrayCT, filenameCT, outputfbCT, j, (j + 1))
                 else:
-                    print(j)
                     aditionalDeleteCounter += 1
         for j in range(241,272):
-            slice_fb(image_arrayM1, inputfileM1, outputfbM1, j, (j + 1))
-            slice_fb(image_arrayCT, inputfileCT, outputfbCT, j, (j + 1))
+            slice_fb(image_arrayM1, filenameM1, outputfbM1, j, (j + 1))
+            slice_fb(image_arrayCT, filenameCT, outputfbCT, j, (j + 1))
 
         for j in range(272, total_slicesFB):
             if j % 4 == 0 and not(allZeros(image_arrayM1[:, j, :])):
-                slice_fb(image_arrayM1, inputfileM1, outputfbM1, j, (j + 1))
-                slice_fb(image_arrayCT, inputfileCT, outputfbCT, j, (j + 1))
+                slice_fb(image_arrayM1, filenameM1, outputfbM1, j, (j + 1))
+                slice_fb(image_arrayCT, filenameCT, outputfbCT, j, (j + 1))
 
         deleteLastN(outputfbCT,10)
         deleteLastN(outputfbM1,10)
@@ -153,14 +146,16 @@ def main(argv):
         for j in range(0, total_slicesTB):
             if j % 4 == 0 and not(allZeros(image_arrayM1[:, :, j])):
                 if aditionalDeleteCounter > 4:
-                    slice_tb(image_arrayM1, inputfileM1, outputtbM1, j, (j + 1))
-                    slice_tb(image_arrayCT, inputfileCT, outputtbCT, j, (j + 1))
+                    slice_tb(image_arrayM1, filenameM1, outputtbM1, j, (j + 1))
+                    slice_tb(image_arrayCT, filenameCT, outputtbCT, j, (j + 1))
                 else:
                     aditionalDeleteCounter += 1
         deleteLastN(outputtbCT, 4)
         deleteLastN(outputtbM1, 4)
 
         gc.collect()
+        end = time()
+        print('\n\n\n', (end - start), "sec")
 
 
 # call the function to start the program

@@ -7,6 +7,7 @@ import imageio
 import gc
 from skimage.transform import resize
 import warnings
+from time import time
 
 def slice_lr(image_array, inputfile, outputlr, from_slice, to_slice):
     if to_slice > image_array.shape[0]:
@@ -17,10 +18,7 @@ def slice_lr(image_array, inputfile, outputlr, from_slice, to_slice):
 
         data = data.astype(numpy.float32)
         data = resize(data, (512, 512))
-        imageio.imwrite(image_name, data)
-        src = image_name
-        shutil.move(src, outputlr)
-    gc.collect()
+        imageio.imwrite(outputlr + "\\" + image_name, data)
 
 
 def slice_fb(image_array, inputfile, outputfb, from_slice, to_slice):
@@ -31,11 +29,7 @@ def slice_fb(image_array, inputfile, outputfb, from_slice, to_slice):
         image_name = inputfile[:-7] + "_z" + "{:0>3}".format(str(current_slice + 1)) + ".png"
         data = data.astype(numpy.float32)
         data = resize(data, (512, 512))
-        imageio.imwrite(image_name, data)
-        # move images to folder
-        src = image_name
-        shutil.move(src, outputfb)
-    gc.collect()
+        imageio.imwrite(outputfb + "\\" + image_name, data)
 
 
 def slice_tb(image_array, inputfile, outputtb, from_slice, to_slice):
@@ -46,33 +40,29 @@ def slice_tb(image_array, inputfile, outputtb, from_slice, to_slice):
         data = image_array[:, :, current_slice]
         image_name = inputfile[:-7] + "_z" + "{:0>3}".format(str(current_slice + 1)) + ".png"
         data = data.astype(numpy.float32)
-        imageio.imwrite(image_name, data)
-        # move images to folder
-        src = image_name
-        shutil.move(src, outputtb)
+        imageio.imwrite(outputtb + "\\" + image_name, data)
     gc.collect()
 
 
 def main(argv):
+    sys.setrecursionlimit(1500)
+    start = time()
 
-    inputfileCT = "C:\\Users\\Dan\\Desktop\\testscans\\"
-    outputfolder = "C:\\Users\\Dan\\Desktop\\TestScans\\" + "001"  # Output location
+    inputfileCT = argv[0]
 
-    file_name = "CTR_TRN_" + "001" + ".nii.gz"
-    inputfileCT = inputfileCT + file_name
+    outputfolder = "C:\\Users\\denis\\Desktop\\TestScans\\" + os.path.basename(argv[0]).split(".",1)[0]  # Output location
 
-    outputlrCT = outputfolder + "\\CT Scan\\All\\LeftRight"
-    outputfbCT = outputfolder + "\\CT Scan\\All\\FrontBack"
-    outputtbCT = outputfolder + "\\CT Scan\\All\\TopBottom"
+    filenameCT = os.path.basename(argv[0]).split(".",1)[0]
 
+    outputlrCT = outputfolder + "\\CT Scan\\LeftRight"
+    outputfbCT = outputfolder + "\\CT Scan\\FrontBack"
+    outputtbCT = outputfolder + "\\CT Scan\\TopBottom"
 
     image_arrayCT = nibabel.load(inputfileCT).get_fdata()
     image_arrayCT = image_arrayCT.astype(numpy.int16)
 
-    # set destination folder
     if not os.path.exists(outputfolder):
         os.makedirs(outputfolder)
-
     else:
         shutil.rmtree(outputfolder)
         os.makedirs(outputfolder)
@@ -85,28 +75,18 @@ def main(argv):
     total_slicesFB = image_arrayCT.shape[1]
     total_slicesTB = image_arrayCT.shape[2]
 
-    aditionalDeleteCounter = 0
     for j in range(0, total_slicesLR):
-        slice_lr(image_arrayCT, inputfileCT, outputlrCT, j, (j + 1))
-
+        slice_lr(image_arrayCT, filenameCT, outputlrCT, j, (j + 1))
     gc.collect()
 
-    aditionalDeleteCounter = 0
-
-    for j in range(0, 241):
-        slice_fb(image_arrayCT, inputfileCT, outputfbCT, j, (j + 1))
-
-    for j in range(241,272):
-        slice_fb(image_arrayCT, inputfileCT, outputfbCT, j, (j + 1))
-
-    for j in range(272, total_slicesFB):
-
-        slice_fb(image_arrayCT, inputfileCT, outputfbCT, j, (j + 1))
+    for j in range(0, total_slicesFB):
+        slice_fb(image_arrayCT, filenameCT, outputfbCT, j, (j + 1))
 
     for j in range(0, total_slicesTB):
-        slice_tb(image_arrayCT, inputfileCT, outputtbCT, j, (j + 1))
+        slice_tb(image_arrayCT, filenameCT, outputtbCT, j, (j + 1))
 
-    gc.collect()
+    end = time()
+    print('\n\n\n', (end - start), "sec")
 
 
 # call the function to start the program
