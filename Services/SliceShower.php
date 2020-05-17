@@ -1,12 +1,13 @@
 <?php
           if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $ct_path = $_POST['path_to_ct'];
+
             $ct_path = str_replace("\\", "\\\\", $ct_path);
             
             exec("C:/Python/python.exe C:\\xampp\\htdocs\\Software-Engineering2020\\Scripts\\PreProcessingScripts\\nii_to_png_All_Slices.py "
               . $ct_path );
         }
-          
+
  ?>
  
 <!DOCTYPE html>
