@@ -1,5 +1,11 @@
 <?php
-          include __DIR__ . '\SliceShowerHtml.php' ;  
+          include __DIR__ . '\SliceShowerHtml.php' ;
+         
+          if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $ct_path = $_POST['path_to_ct'];
+            $mask_path = $_POST['path_to_mask'];
+            exec("python nii_to_png_script3.0.py $ct_path $mask_path");
+        }  
  ?>
  
 <script>
