@@ -2,6 +2,7 @@
 <html>
 <head>
      <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="SliceShower.css" rel="stylesheet">
 </head>
 <body>
 <div id = "chenar">
@@ -31,114 +32,7 @@
     </div>
     </div>
     </body>
-<style>
-#chenar{
-    border-radius:10px;
-    margin-left:40px;
-    margin-right:40px;
-    padding-left:15px;
-    padding-right:15px;
-    background-color:  #f4f4f4;
-}
-h2{
-    text-align:center;
-    padding-top:15px;
-}
-hr{
-    width:95%;
-}
 
-
-body{
-    background-color:  white;
-}
-.ContainerMajor{
-    display: flex;
-    height:auto;
-    flex-direction:row;
-    justify-content:center;
-    text-align:center;
-    /*border: 1px solid rgba(187, 187, 206, 0.787);*/
-    border-radius:10px;
-    padding:20px;
-    padding-top: 0px;
-    /*background-color: rgb(247, 247, 255);*/
-
-}
-.slider {
-  -webkit-appearance: none;
-  width: 70%;
-  border-radius: 5px;  
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  cursor:pointer;
-}
-
-.prod_img{
-    width:340px;
-    height:340px;
-    border-radius:15px;
-    margin-left:15px;
-    margin-right:15px;
-    border: 1px solid black;
-}
-
-@media (min-width:1850px){
-    .prod_img{
-    width:512px;
-    height:512px;
-    border-radius:15px;
-    margin-left:55px;
-    margin-right:55px
-    }
-}
-@media (min-width:859px)and (max-width:1212px){
-    .prod_img{
-        width:250px;
-        height:250px;
-        margin-left:10px;
-        margin-right:10px;
-    }
-    .ContainerMajor{
-        padding: 5px;
-    }
-    #chenar{
-        margin:15px;
-    }
-    
-}
-@media (min-width:660px)and (max-width:858px){
-    .prod_img{
-        width:200px;
-        height:200px;
-        margin-left:5px;
-        margin-right:5px;
-    }
-    .ContainerMajor{
-        padding: 5px;
-    }
-    #chenar{
-        margin:5px;
-    }
-    
-}
-@media (min-width:300px)and (max-width:660px){
-    .ContainerMajor{
-    flex-direction:column;
-    padding: 5px;
-}
-.prod_img{
-        width:250px;
-        height:250px;
-        margin:0px;
-    }
-    #chenar{
-        margin:5px;
-    }
-}
-</style>
 <script>
 var sliderFB = document.getElementById("myRangeFB");
 var outputFB = document.getElementById("FB");
