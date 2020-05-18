@@ -7,7 +7,6 @@ import imageio
 import gc
 from skimage.transform import resize
 import warnings
-from time import time
 
 def allZeros(list):
     for elem in list:
@@ -62,8 +61,6 @@ def slice_tb(image_array, inputfile, outputtb, from_slice, to_slice):
 
 
 def main(argv):
-    sys.setrecursionlimit(1500)
-    start = time()
 
     inputfileM1 = argv[1]
     inputfileCT = argv[0]
@@ -154,8 +151,6 @@ def main(argv):
         deleteLastN(outputtbM1, 4)
 
         gc.collect()
-        end = time()
-        print('\n\n\n', (end - start), "sec")
 
 
 # call the function to start the program

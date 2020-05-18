@@ -46,7 +46,7 @@ def slice_tb(image_array, inputfile, outputtb, from_slice, to_slice):
 def main(argv):
     inputfileCT = argv[0]
 
-    outputfolder = "C:\\xampp\\htdocs\\ProcessedPatients\\" + os.path.basename(argv[0]).split(".", 1)[0]  # Output location
+    outputfolder = "C:\\xampp\\htdocs\\Software-Engineering2020\\ProcessedPatients\\" + os.path.basename(argv[0]).split(".", 1)[0]  # Output location
 
     filenameCT = os.path.basename(argv[0]).split(".", 1)[0]
 
