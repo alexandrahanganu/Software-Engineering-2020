@@ -12,9 +12,9 @@ def def_labels_left_has_pleurisy(nume_pacient):
         reader = csv.reader(file)
         for row in reader:
             if row[0] == nume_pacient:
-                if row[3] == '1':
+                if row[5] == '1':
                     return [1, 0]  # has pleurisy
-                if row[3] == '0':
+                if row[5] == '0':
                     return [0, 1]  # doesn't have pleurisy
                 break
 
