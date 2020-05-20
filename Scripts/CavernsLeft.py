@@ -12,9 +12,9 @@ def def_labels_left_has_caverns(nume_pacient):
         reader = csv.reader(file)
         for row in reader:
             if row[0] == nume_pacient:
-                if row[4] == '1':
+                if row[3] == '1':
                     return [1, 0]  # has caverns
-                if row[4] == '0':
+                if row[3] == '0':
                     return [0, 1]  # doesn't have caverns
                 break
 
