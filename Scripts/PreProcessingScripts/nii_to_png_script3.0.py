@@ -6,7 +6,6 @@ import shutil
 import imageio
 import gc
 from skimage.transform import resize
-import warnings
 
 def allZeros(list):
     for elem in list:
@@ -65,7 +64,7 @@ def main(argv):
     inputfileM1 = argv[1]
     inputfileCT = argv[0]
 
-    outputfolder = "C:\\Users\\denis\\Desktop\\TestScans\\" + os.path.basename(argv[0]).split(".",1)[0]  # Output location
+    outputfolder = "C:\\xampp\\htdocs\\Software-Engineering2020\\Algorithm Input" + os.path.basename(argv[0]).split(".",1)[0]  # Output location
 
     filenameM1 = os.path.basename(argv[1]).split(".",1)[0]
     filenameCT = os.path.basename(argv[0]).split(".",1)[0]
