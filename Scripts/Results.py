@@ -1,39 +1,3 @@
-# def def_labels_right_has_Tuberculosis(nume_pacient):
-#     with open('D:\\Git\\CT_Report.csv', 'r') as file:
-#         reader = csv.reader(file)
-#         for row in reader:
-#             if row[0] == nume_pacient:
-#                 if row[2] == '1':
-#                     return [1, 0]  # has tbc
-#                 if row[2] == '0':
-#                     return [0, 1]  # doesn't have tbc
-#                 break
-
-
-
-# with open('C:\\Users\\Theo\\PycharmProjects\\TuberculosisProject\\TBC_Results_Left.csv', 'r') as file:
-#     with open('Final_Results.csv', 'a') as f:
-#         rowIndex = []
-#         tbcList = []
-#         reader = csv.reader(file)
-#         i = 0
-#         j = 0
-#         for row in reader:
-#             id = row[0]
-#             TBCpercent = row[1]
-#             rowIndex.append(id)
-#             tbcList.append(TBCpercent)
-#             #fa liste pt fiecare coloana si apoi scrie
-#
-#         print (rowIndex)
-#         print (tbcList)
-#         print (rowIndex[0])
-#         print (tbcList[0])
-#         print (row_count)
-
-
-
-
 
 import csv
 
@@ -102,32 +66,3 @@ with open('Final_Results.csv', 'a') as f:
         i = i + 1
 
 
-# with open('TBC_Results_Right.csv', 'w') as f:
-#     f.write('id,label\n')
-#
-# with open('TBC_Results_Right.csv', 'a') as f:
-#     value = '178'
-#     avg = 0
-#     cont = 0
-#     valoare = 0
-#     for data in tqdm(test_data):
-#         img_num = data[1]
-#
-#         if value in img_num:
-#
-#             cont = cont + 1
-#             img_data = data[0]
-#             data = img_data.reshape(-1, IMG_SIZE, IMG_SIZE, easy)
-#             model_out = model.predict([data])[0]
-#             avg = avg + model_out[0]
-#         else:
-#             valoare = avg / cont
-#             f.write('{}, {}\n'.format(value, valoare))
-#             value1 = int(value)
-#             value1 = value1 + 1
-#             value = str(value1)
-#
-#             avg = 0
-#             cont = 0
-#     valoare = avg / cont
-#     f.write('{}, {}\n'.format(value, valoare))
