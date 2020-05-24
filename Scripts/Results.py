@@ -38,7 +38,7 @@
 import csv
 
 with open('Final_Results.csv', 'w') as f:
-    f.write('Patient, LeftTuberculosis, RightTuberculosis, CavernsLeft, CavernsRight, PleurisyLeft, PleurisyRight\n')
+    f.write('Filename, LeftLungAffected, RightLungAffected, CavernsLeft, CavernsRight, PleurisyLeft, PleurisyRight\n')
 
 
 with open('C:\\Users\\Theo\\PycharmProjects\\TuberculosisProject\\TBC_Results_Left.csv', 'r') as file:
